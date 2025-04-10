@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <title>Wi-Fi QR Code Generator</title>
+
+  <link rel="manifest" href="/manifest.json" />
+  
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900 flex justify-center items-center h-screen m-0">
+  <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg w-80 text-center">
+    <h1 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Wi-Fi QR Code Generator</h1>
+
+    <div id="ssid-page">
+      <div class="mb-4">
+        <input type="text" id="ssid" class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md text-gray-900 dark:text-white bg-white dark:bg-gray-700 placeholder-gray-500 dark:placeholder-gray-400"
+          placeholder="Wi-Fi Name (SSID)">
+      </div>
+      <button id="next-btn" class="w-full p-3 bg-green-500 dark:bg-green-700 text-white rounded-md hover:bg-green-600 dark:hover:bg-green-600">Next</button>
+    </div>
+
+    <div id="password-page" style="display: none;">
+      <div class="mb-4">
+        <input type="password" id="password" class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md text-gray-900 dark:text-white bg-white dark:bg-gray-700 placeholder-gray-500 dark:placeholder-gray-400"
+          placeholder="Wi-Fi Password">
+      </div>
+      <button id="generate-btn" class="w-full p-3 bg-blue-500 dark:bg-blue-700 text-white rounded-md hover:bg-blue-600 dark:hover:bg-blue-600">Generate QR Code</button>
+    </div>
+
+    <div id="qr-code" class="mt-6"></div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+
+</html>
